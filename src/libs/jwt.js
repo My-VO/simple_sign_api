@@ -5,11 +5,22 @@ class JwtService {
     }
 
     async decodeToken(token) {
-        return await this.jwt.verify(token, this.secret);
+        const jwtVerify = await this.jwt.verify(token, this.secret, (err, verifiedJwt) => {
+            if(err) {
+                console.log(`err`, err)
+            } else {
+                return verifiedJwt
+            }
+        });
+        return jwtVerify
     }
 
-    async generateToken(data) {
-        return await this.jwt.sign(data, this.secret);
+    async generateToken({id, role}) {
+        return await this.jwt.sign(
+            {
+                userId: id,
+                userRole: role
+            }, this.secret);
     }
 };
 

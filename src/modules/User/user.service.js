@@ -10,6 +10,10 @@ class UserService {
     async getByEmail(email) {
         return await this.userRepo.getByEmail(email);
     }
+
+    async register(userData) {
+        return await this.userRepo.register(userData);
+    }
 };
 
 export default UserService;

@@ -1,14 +1,15 @@
 class UserRouter {
     constructor({router, userController, auth}) {
         this.router = router;
-        this.initializeRoutes(userController, auth);
+        this.initializeRoutes({userController, auth});
 
         return this.router;
     }
 
-    initializeRoutes(userController) {
+    initializeRoutes({userController, auth}) {
         this.router.route('/users')
-            .get(userController.getAll);
+            .get(auth.authenticate, userController.getAll)
+            .post(auth.authenticate, userController.register);
 
         this.router.route('/users/authenticate').post(userController.login);
     }

@@ -1,12 +1,12 @@
 import { Model } from 'sequelize';
 
-class UserDao extends Model {
+class User extends Model {
     static init(sequelize, DataTypes) {
         return super.init(
             {
                 fullName: DataTypes.STRING,
                 email: DataTypes.STRING,
-                authCode: DataTypes.INTEGER,
+                authCode: DataTypes.STRING,
                 role: DataTypes.STRING,
             }, {sequelize, modelName: 'User'}
         );
@@ -17,4 +17,4 @@ class UserDao extends Model {
     }
 };
 
-export default UserDao;
+export default User;

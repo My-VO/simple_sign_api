@@ -12,6 +12,6 @@ CREATE TABLE IF NOT EXISTS Users (
 );
 
 INSERT INTO Users (`id`, `fullName`, `email`, `authCode`, `role`, `createdAt`, `updatedAt`) VALUES
-('1', 'Rick Novak', 'rick.novak@gmail.com', '$2y$10$jEF6r75iDDHOP.E4Hq3bhOIF1wUQC7Ugeywv/YGviVUHXRmVL6Qee', 'admin', '2021-07-21 12:29:11', '2021-07-21 12:29:11'),
-('2', 'Susan Connor', 'susan.connor@gmail.com', '$2y$10$jEF6r75iDDHOP.E4Hq3bhOIF1wUQC7Ugeywv/YGviVUHXRmVL6Qee', 'trainer', '2021-07-21 12:29:11', '2021-07-21 12:29:11'),
-('3', 'John Kennedy', 'john.kennedy@gmail.com', '$2y$10$jEF6r75iDDHOP.E4Hq3bhOIF1wUQC7Ugeywv/YGviVUHXRmVL6Qee', 'student', '2021-07-21 12:29:11', '2021-07-21 12:29:11');
+('3641', 'Rick Novak', 'rick.novak@gmail.com', '$2b$10$XKYUeJ6PtUpW7C8oKi.iJeB.uFsPTR.1frhpXwXyZrknu5k/HStei', 'admin', '2021-07-21 12:29:11', '2021-07-21 12:29:11'),
+('7736', 'Susan Connor', 'susan.connor@gmail.com', '$2b$10$21k1MdIjGnBE1JaSzUFfK.qZzFOQV6eYV293HdNZBHFOV7Y4NmgWe', 'trainer', '2021-07-21 12:29:11', '2021-07-21 12:29:11'),
+('3774', 'John Kennedy', 'john.kennedy@gmail.com', '$2b$10$TnnaDfSseISxruLzoaX34ey8ax8M1/bIJI2UkUczNLPqC9dva/Q6i', 'student', '2021-07-21 12:29:11', '2021-07-21 12:29:11');
